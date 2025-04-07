@@ -4,7 +4,7 @@ Welcome to my GitHub portfolio! I'm Reim Yousef, a Robotics Engineering student 
 
 ---
 
-## 🚀 [Robotics & Autonomy](https://github.com/reimyousef/reimyousef.github.io/tree/main/Robotics_And_Autonomoy)
+## [Robotics & Autonomy](https://github.com/reimyousef/reimyousef.github.io/tree/main/Robotics_And_Autonomoy)
 Projects involving ROS, motion planning, computer vision, and intelligent systems.
 
 - **Autonomous Mail Robot**: A ROS-based mobile robot that uses Bayesian localization, PID line-following, and color detection to deliver to virtual offices.
@@ -14,7 +14,7 @@ Projects involving ROS, motion planning, computer vision, and intelligent system
 
 ---
 
-## 🔧 [Embedded Systems & Firmware](https://github.com/reimyousef/reimyousef.github.io/tree/main/Embedded_Systems_And_Firmware)
+## [Embedded Systems & Firmware](https://github.com/reimyousef/reimyousef.github.io/tree/main/Embedded_Systems_And_Firmware)
 Hardware-integrated projects using C/C++, microcontrollers, and sensors.
 
 - **CoreXY 2D Plotting Robot**: Precision motion control using stepper motors and kinematics.
@@ -23,7 +23,7 @@ Hardware-integrated projects using C/C++, microcontrollers, and sensors.
 
 ---
 
-## 🤖 [Machine Learning & AI](https://github.com/reimyousef/reimyousef.github.io/tree/main/Machine_Learning)
+## [Machine Learning & AI](https://github.com/reimyousef/reimyousef.github.io/tree/main/Machine_Learning)
 Projects focused on deep learning, neural networks, and applied ML.
 
 - **Banana Readiness Detector**: CNN trained to detect banana ripeness from image data.
@@ -31,7 +31,7 @@ Projects focused on deep learning, neural networks, and applied ML.
 
 ---
 
-## 🧠 [Software & Algorithms](https://github.com/reimyousef/reimyousef.github.io/tree/main/Software_Engineering_Algorithims)
+## [Software & Algorithms](https://github.com/reimyousef/reimyousef.github.io/tree/main/Software_Engineering_Algorithims)
 Algorithmic problem solving and software-based systems.
 
 - **Scene Carving Image Resizer**: Content-aware image resizing using dynamic programming (C).
@@ -39,11 +39,13 @@ Algorithmic problem solving and software-based systems.
 
 ---
 
-## 🛠 Skills Snapshot
+## Skills Snapshot
 **Languages**: Python, C++, C, MATLAB, Assembly  
 **Tools**: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git  
 **Concepts**: SLAM, PID, Kalman Filter, Bayesian Estimation, Deep Learning, Embedded Systems
 
 ---
 
-> 📫 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/reim-yousef/) or [reim.yousef@mail.utoronto.ca](mailto:reim.yousef@mail.utoronto.ca)
+**Contact**  
+[LinkedIn](https://www.linkedin.com/in/reim-yousef/)  
+[reim.yousef@mail.utoronto.ca](mailto:reim.yousef@mail.utoronto.ca)

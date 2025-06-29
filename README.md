@@ -37,10 +37,15 @@ Algorithmic problem solving and software-based systems.
 - **Scene Carving Image Resizer**: Content-aware image resizing using dynamic programming (C).
 - **Game Heuristics & Search**: Implementations of game trees, heuristics, and classic AI algorithms like Minimax.
 
+
+## [Web Development]()
+Full-stack applications designed with user experience, database integration, and backend logic in mind.
+- **Medical Students Research Portal**: Full-stack website for students to access research sessions, post inquiries, and contribute to academic surveys.
+
 ---
 
 ## Skills Snapshot
-**Languages**: Python, C++, C, MATLAB, Assembly  
+**Languages**: Python, C++, C, MATLAB, Assembly, HTML, CSS, JavaScript, Node.js
 **Tools**: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git  
 **Concepts**: SLAM, PID, Kalman Filter, Bayesian Estimation, Deep Learning, Embedded Systems
 

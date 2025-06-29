@@ -45,8 +45,8 @@ Full-stack applications designed with user experience, database integration, and
 ---
 
 ## Skills Snapshot
-**Languages**: Python, C++, C, MATLAB, Assembly, HTML, CSS, JavaScript, Node.js
-**Tools**: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git  
+**Languages**: Python, C++, C, MATLAB, Assembly, HTML, CSS, JavaScript, Node.js <br>
+**Tools**: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git  <br>
 **Concepts**: SLAM, PID, Kalman Filter, Bayesian Estimation, Deep Learning, Embedded Systems
 
 ---

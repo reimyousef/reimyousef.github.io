@@ -1,56 +1,49 @@
-# Reim Yousef – Engineering Portfolio
+# Reim Yousef
 
-Welcome to my GitHub portfolio! I'm Reim Yousef, a Robotics Engineering student at the University of Toronto specializing in autonomous systems, intelligent hardware, and machine learning applications. My work spans embedded systems, robotic autonomy, and algorithmic problem-solving.
+Robotics Engineering student at the University of Toronto interested in
+robotics, autonomous systems, and intelligent machines.
 
----
+I enjoy working across the software and hardware of robotic systems, from
+motion planning and perception to embedded systems and machine learning.
 
-## [Robotics & Autonomy](https://github.com/reimyousef/reimyousef.github.io/tree/main/Robotics_And_Autonomoy)
-Projects involving ROS, motion planning, computer vision, and intelligent systems.
-
-- **Autonomous Mail Robot**: A ROS-based mobile robot that uses Bayesian localization, PID line-following, and color detection to deliver to virtual offices.
-- **ASTAR Obstacle Avoidance**: Autonomous rover navigation using A* path planning and obstacle detection.
-- **YOLOv8 Object Detector**: Real-time object detection pipeline deployed on a robotic platform for mission-critical tasks.
-- **Grid Search Node**: Implements waypoint-based search strategy with ArUco marker detection and ROS velocity control.
+**[Website](https://reimyousef.github.io)** ·
+**[LinkedIn](https://www.linkedin.com/in/reim-yousef/)**
 
 ---
 
-## [Embedded Systems & Firmware](https://github.com/reimyousef/reimyousef.github.io/tree/main/Embedded_Systems_And_Firmware)
-Hardware-integrated projects using C/C++, microcontrollers, and sensors.
+## Projects
 
-- **CoreXY 2D Plotting Robot**: Precision motion control using stepper motors and kinematics.
-- **Wireless Sensor System**: ESP32-based wearable system using IMUs, ESP-NOW communication, and real-time sensor fusion.
-- **Smart Bin System**: Python-driven mechatronic system with load cells and ultrasonic sensors for waste tracking.
+### Inertial Parameter Estimation
+Thesis project investigating the estimation of serial manipulator inertial
+parameters using force-moment sensing and IMUs on a Stewart platform.
 
----
+### Autonomous Rover
+ROS2-based rover autonomy involving perception, navigation, obstacle
+avoidance, and mission operations.
 
-## [Machine Learning & AI](https://github.com/reimyousef/reimyousef.github.io/tree/main/Machine_Learning)
-Projects focused on deep learning, neural networks, and applied ML.
+### CoreXY Motion System
+Embedded motion-control system using stepper motors, CoreXY kinematics,
+and microcontroller-based firmware.
 
-- **Banana Readiness Detector**: CNN trained to detect banana ripeness from image data.
-- **Center of Pressure Estimation**: ANN and LSTM-based prediction models for wearable sensor data.
+### Center of Pressure Estimation
+Wearable sensing system using inertial measurements and neural networks to
+estimate center of pressure.
 
----
-
-## [Software & Algorithms](https://github.com/reimyousef/reimyousef.github.io/tree/main/Software_Engineering_Algorithims)
-Algorithmic problem solving and software-based systems.
-
-- **Scene Carving Image Resizer**: Content-aware image resizing using dynamic programming (C).
-- **Game Heuristics & Search**: Implementations of game trees, heuristics, and classic AI algorithms like Minimax.
-
-
-## [Web Development]()
-Full-stack applications designed with user experience, database integration, and backend logic in mind.
-- **Medical Students Research Portal**: Full-stack website for students to access research sessions, post inquiries, and contribute to academic surveys.
+More projects and details are available on my
+**[website](https://reimyousef.github.io)**.
 
 ---
 
-## Skills Snapshot
-**Languages**: Python, C++, C, MATLAB, Assembly, HTML, CSS, JavaScript, Node.js <br>
-**Tools**: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git  <br>
-**Concepts**: SLAM, PID, Kalman Filter, Bayesian Estimation, Deep Learning, Embedded Systems
+## Skills
+
+**Languages:** C++, C, Python, MATLAB, JavaScript, Bash, Assembly  
+**Robotics:** ROS2, OpenCV, SLAM, motion planning, state estimation, PID control  
+**Machine Learning:** PyTorch, TensorFlow, neural networks  
+**Systems:** Embedded systems, Linux, Git, Docker
 
 ---
 
-**Contact**  
-[LinkedIn](https://www.linkedin.com/in/reim-yousef/)  
-[reim.yousef@mail.utoronto.ca](mailto:reim.yousef@mail.utoronto.ca)
+## Contact
+
+**Email:** reim.yousef@mail.utoronto.ca  
+**LinkedIn:** https://www.linkedin.com/in/reim-yousef/

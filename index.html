@@ -1,96 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reim Yousef | Engineering Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2rem;
-      background-color: #f9f9f9;
-      color: #391735;
-    }
-    h1, h2 {
-      color: #370a3c;
-      margin-top: 2rem;
-    }
-    ul {
-      line-height: 1.8;
-      list-style-type: square;
-    }
-    a {
-      color: #60a884;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    p {
-    margin: 0.5rem 0; /* 👈 this ensures each paragraph has spacing */
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reim Yousef</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #dededb;
+        }
+
+        .name {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .nav-links a:hover {
+            color: #111;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -1.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            font-size: 1.15rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 70px 0;
+            border-top: 1px solid #dededb;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #888;
+            margin-bottom: 35px;
+        }
+
+        /* Currently */
+
+        .currently {
+            max-width: 720px;
+        }
+
+        .currently-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .currently-lab {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .currently-description {
+            color: #555;
+        }
+
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px 50px;
+            max-width: 700px;
+        }
+
+        .interest {
+            font-size: 1.05rem;
+        }
+
+        /* Experience */
+
+        .experience-item {
+            margin-bottom: 50px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 8px;
+        }
+
+        .experience-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .experience-date {
+            color: #888;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .experience-role {
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .experience-description {
+            max-width: 720px;
+            color: #555;
+        }
+
+        .view-work {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .view-work:hover {
+            color: #111;
+            border-color: #111;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: #dededb;
+            border: 1px solid #dededb;
+        }
+
+        .project {
+            background: #fff;
+            padding: 30px;
+            transition: background 0.2s ease;
+        }
+
+        .project:hover {
+            background: #f3f3f1;
+        }
+
+        .project h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+
+        .contact p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .contact-links a {
+            color: #555;
+            border-bottom: 1px solid #aaa;
+        }
+
+        .contact-links a:hover {
+            color: #111;
+            border-color: #111;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 50px 0;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 0 20px;
+            }
+
+            nav {
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.05rem;
+            }
+
+            .interests,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Reim Yousef – Engineering Portfolio</h1>
-  <p>I'm a Robotics Engineering student at the University of Toronto specializing in autonomous systems, intelligent hardware, and machine learning applications. My work spans embedded systems, robotic autonomy, and algorithmic problem-solving.</p>
 
-  <section>
-    <h2><a href="https://github.com/reimyousef/reimyousef.github.io/tree/main/Robotics_And_Autonomoy" target="_blank">Robotics & Autonomy</a></h2>
-    <ul>
-      <li><strong>Autonomous Mail Robot</strong>: ROS-based mobile robot using Bayesian localization, PID line-following, and color detection.</li>
-      <li><strong>ASTAR Obstacle Avoidance</strong>: Rover navigation with A* path planning and obstacle detection.</li>
-      <li><strong>YOLOv8 Object Detector</strong>: Real-time object detection for mission-critical robotic deployment.</li>
-      <li><strong>Grid Search Node</strong>: Waypoint search strategy with ArUco marker detection and ROS velocity control.</li>
-    </ul>
-  </section>
+    <div class="container">
 
-  <section>
-    <h2><a href="https://github.com/reimyousef/reimyousef.github.io/tree/main/Machine_Learning" target="_blank">Machine Learning & AI</a></h2>
-    <ul>
-      <li><strong>Banana Readiness Detector</strong>: CNN for ripeness classification using image data.</li>
-      <li><strong>Center of Pressure Estimation</strong>: ANN and LSTM models for wearable sensor prediction.</li>
-    </ul>
-  </section>
+        <!-- Navigation -->
 
-  <section>
-    <h2><a href="https://github.com/reimyousef/reimyousef.github.io/tree/main/Software_Engineering_Algorithims" target="_blank">Software & Algorithms</a></h2>
-    <ul>
-      <li><strong>Scene Carving Image Resizer</strong>: C-based content-aware resizing via dynamic programming.</li>
-      <li><strong>Game Heuristics & Search</strong>: AI algorithm implementations including Minimax and heuristic trees.</li>
-    </ul>
-  </section>
+        <nav>
+            <div class="nav-links">
+                <a href="#top">Top</a>
+                <a href="#academic">Academic</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
 
-  <section>
-    <h2><a href="https://github.com/reimyousef/reimyousef.github.io/tree/main/Embedded_Systems_And_Firmware" target="_blank">Embedded Systems & Firmware</a></h2>
-    <ul>
-      <li><strong>CoreXY 2D Plotting Robot</strong>: Precision motion control with stepper motors and CoreXY kinematics.</li>
-      <li><strong>Wireless Sensor System</strong>: ESP32-based wearable system with IMUs and real-time sensor fusion.</li>
-      <li><strong>Smart Bin System</strong>: Mechatronics project using load cells and ultrasonic sensors for waste tracking.</li>
-    </ul>
-  </section>
 
-  <section>
-    <h2><a href="https://github.com/reimyousef/reimyousef.github.io/tree/main/Web_Development" target="_blank">Web Development</a></h2>
-    <ul>
-      <li><strong>Medical Students Research Portal</strong>: Fullstack portal with user authentication, admin verification tools, and dynamic form submission. </li>
-    </ul>
-  </section>
+        <!-- Hero -->
 
-  <section>
-    <h2>Skills Snapshot</h2>
-    <p><strong>Languages</strong>: Python, C++, C, MATLAB, Assembly, HTML, CSS, JavaScript, Node.js</p> 
-    <p><strong>Tools</strong>: ROS, OpenCV, TensorFlow, PyTorch, ESP-NOW, SolidWorks, Bash, Git</p>
-    <p><strong>Concepts</strong>: SLAM, PID, Kalman Filter, Bayesian Estimation, Deep Learning, Embedded Systems</p>
-  </section>
+        <main>
+          <section id="about" class="hero">
+              <div class="hero-content">
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:reim.yousef@mail.utoronto.ca">reim.yousef@mail.utoronto.ca</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/reim-yousef/">linkedin.com/in/reim-yousef</a></p>
-    <p>GitHub: <a href="https://github.com/reimyousef/reimyousef.github.io" target="_blank">Portfolio Repository</a></p>
-  </section>
+                  <div class="hero-text">
+                      <h1>Hi there! I'm Reim.</h1>
+
+                      <p>
+                          I’m a Robotics Engineering student at the University of Toronto
+                          interested in automating systems and finding ways to bring robotics
+                          into everyday life, whether that’s in industry, the home, or other
+                          real-world environments.
+                      </p>
+                  </div>
+
+                  <div class="hero-photo">
+                      <img src="images/reim.jpg" alt="Reim Yousef">
+                  </div>
+
+              </div>
+          </section>
+
+
+          <section id="academic">
+              
+              <div class="section-title">
+                    Academic Background
+                </div>
+              <div class="academic-details">
+                
+              
+                  <span class="tag">University of Toronto · 2022–2027</span>
+
+                  <h3>Engineering Science — Robotics Engineering</h3>
+
+                  <p>
+                      Bachelor of Applied Science in Engineering Science, specializing
+                      in Robotics Engineering with minors in Machine Intelligence and
+                      Engineering Business.
+                  </p>
+
+                  <p>
+                      My coursework and projects span robotics, autonomous systems,
+                      machine learning, computer vision, state estimation, embedded
+                      systems, and control.
+                  </p>
+              </div>
+          </section>
+
+        </main>
+
+            <!-- Experience -->
+
+<section id="experience">
+
+    <div class="section-title">
+        Experience
+    </div>
+
+    <div class="horizontal-scroll">
+
+        <div class="experience-card">
+            <span class="tag">2026</span>
+            <h3>MDA Space</h3>
+            <p>GNC Engineering Intern</p>
+        </div>
+
+        <div class="experience-card">
+            <span class="tag">2022–Present</span>
+            <h3>Robotics for Space Exploration</h3>
+            <p>Systems Engineering Coordinator · Former Software Lead</p>
+        </div>
+
+        <div class="experience-card">
+            <span class="tag">2025–2026</span>
+            <h3>Engineering CPR</h3>
+            <p>Device Manufacturing Technician Intern</p>
+        </div>
+
+
+        <div class="experience-card">
+            <span class="tag">2024</span>
+            <h3>UHN × Toronto Smart Materials and Structures Lab</h3>
+            <p>NSERC Robotics & AI Software Intern</p>
+        </div>
+
+        
+    </div>
+
+</section>
+
+
+            <!-- Projects -->
+<section id="projects">
+
+    <div class="section-title">
+        Projects
+    </div>
+
+    <div class="horizontal-scroll">
+
+        <div class="project-card">
+            <span class="tag">Thesis · 2026–2027</span>
+            <h3>Inertial Parameter Estimation</h3>
+            <p>
+                Estimating serial manipulator inertial parameters using
+                force-moment sensing and IMUs on a Stewart platform.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Robotics · ROS2</span>
+            <h3>Autonomous Rover</h3>
+            <p>
+                Rover autonomy involving perception, navigation,
+                obstacle avoidance, and mission operations.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Embedded Systems</span>
+            <h3>CoreXY Motion System</h3>
+            <p>
+                Firmware-level motion coordination using embedded C,
+                stepper motors, and CoreXY kinematics.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <span class="tag">Machine Learning</span>
+            <h3>Center of Pressure Estimation</h3>
+            <p>
+                Wearable sensing and neural-network models for estimating
+                center of pressure from inertial measurements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+            
+        <section id="about-me">
+
+            <div class="section-title">
+                A Little More About Me
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-item">
+                    <h3>Baking</h3>
+                    <p>
+                        I enjoy trying new recipes, experimenting in the kitchen,
+                        and occasionally attempting things that are probably more
+                        complicated than they need to be.
+                    </p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Climbing</h3>
+                    <p>
+                        I like the problem-solving side of climbing and having
+                        something that gets me away from a screen.
+                    </p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Outdoors</h3>
+                    <p>
+                        I enjoy hiking, exploring new places, and finding excuses
+                        to spend more time outside.
+                    </p>
+                </div>
+
+                <div class="about-item">
+                    <h3>Reading</h3>
+                    <p>
+                        I like getting immersed in different kinds of stories
+                        and finding books that make me think about things
+                        differently.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+            <!-- Contact -->
+
+            <section id="contact" class="contact">
+
+                <div class="section-title">
+                    Contact
+                </div>
+
+                <div class="contact-links">
+
+                    <a href="mailto:reim.yousef@mail.utoronto.ca">
+                        Email
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/reim-yousef/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/reimyousef"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer>
+            © 2026 Reim Yousef
+        </footer>
+
+    </div>
+
 </body>
 </html>

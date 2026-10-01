@@ -9,283 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        /* Navigation */
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 0;
-            border-bottom: 1px solid #dededb;
-        }
-
-        .name {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .nav-links a:hover {
-            color: #111;
-        }
-
-        /* Hero */
-
-        .hero {
-            padding: 100px 0 80px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 600;
-            letter-spacing: -1.5px;
-            margin-bottom: 25px;
-        }
-
-        .hero p {
-            max-width: 720px;
-            font-size: 1.15rem;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        /* Sections */
-
-        section {
-            padding: 70px 0;
-            border-top: 1px solid #dededb;
-        }
-
-        .section-title {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #888;
-            margin-bottom: 35px;
-        }
-
-        /* Currently */
-
-        .currently {
-            max-width: 720px;
-        }
-
-        .currently-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .currently-lab {
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .currently-description {
-            color: #555;
-        }
-
-        .interests {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px 50px;
-            max-width: 700px;
-        }
-
-        .interest {
-            font-size: 1.05rem;
-        }
-
-        /* Experience */
-
-        .experience-item {
-            margin-bottom: 50px;
-        }
-
-        .experience-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            margin-bottom: 8px;
-        }
-
-        .experience-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .experience-date {
-            color: #888;
-            white-space: nowrap;
-            font-size: 0.9rem;
-        }
-
-        .experience-role {
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .experience-description {
-            max-width: 720px;
-            color: #555;
-        }
-
-        .view-work {
-            display: inline-block;
-            margin-top: 12px;
-            font-size: 0.9rem;
-            color: #555;
-            border-bottom: 1px solid #aaa;
-        }
-
-        .view-work:hover {
-            color: #111;
-            border-color: #111;
-        }
-
-        /* Projects */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-            background: #dededb;
-            border: 1px solid #dededb;
-        }
-
-        .project {
-            background: #fff;
-            padding: 30px;
-            transition: background 0.2s ease;
-        }
-
-        .project:hover {
-            background: #f3f3f1;
-        }
-
-        .project h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .project p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-
-        /* Contact */
-
-        .contact p {
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .contact-links a {
-            color: #555;
-            border-bottom: 1px solid #aaa;
-        }
-
-        .contact-links a:hover {
-            color: #111;
-            border-color: #111;
-        }
-
-        /* Footer */
-
-        footer {
-            padding: 50px 0;
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 650px) {
-
-            .container {
-                padding: 0 20px;
-            }
-
-            nav {
-                align-items: flex-start;
-                gap: 20px;
-            }
-
-            .nav-links {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: flex-end;
-            }
-
-            .hero {
-                padding: 70px 0;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.05rem;
-            }
-
-            .interests,
-            .projects {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-header {
-                flex-direction: column;
-                gap: 2px;
-            }
-        }
-    </style>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&f[]=rosaline@400&f[]=quicksand@500&f[]=britney@400&f[]=bonny@400&f[]=melodrama@500&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -312,88 +37,112 @@
               <div class="hero-content">
 
                   <div class="hero-text">
-                      <h1>Hi there! I'm Reim.</h1>
-
+                      <h1>Hi, I'm Reim. Here’s what I’ve been working on! </h1>
+                          
                       <p>
                           I’m a Robotics Engineering student at the University of Toronto
                           interested in automating systems and finding ways to bring robotics
-                          into everyday life, whether that’s in industry, the home, or other
-                          real-world environments.
+                          into everyday life, whether that’s in industry, the home, or beyond.
                       </p>
                   </div>
 
                   <div class="hero-photo">
-                      <img src="images/reim.jpg" alt="Reim Yousef">
+                      <img src="images/reim_2.png" alt="Reim Yousef">
                   </div>
 
               </div>
           </section>
 
-
           <section id="academic">
-              
-              <div class="section-title">
-                    Academic Background
-                </div>
-              <div class="academic-details">
+
+        <div class="section-title">
+            <h2>Academic Background</h2>
+        </div>
+
+        <span class="tag">University of Toronto · B.A.Sc. Engineering Science · 2022–2027</span>
+
+        <div class="academic-grid">
+
+            <div class="academic-card academic-main">
                 
-              
-                  <span class="tag">University of Toronto · 2022–2027</span>
+                <h3>Major in Robotics Engineering</h3>
+                <p>
+                   Exploring the software and hardware behind autonomous systems, from state estimation and control to computer vision and embedded design.
+                </p>
+            </div>
 
-                  <h3>Engineering Science — Robotics Engineering</h3>
+            <div class="academic-card">
+                
+                <h3>Minor in Machine Intelligence</h3>
+                <p>
+                   Studying machine learning and AI methods for perception, prediction, decision-making, and intelligent systems.
+                </p>
+            </div>
 
-                  <p>
-                      Bachelor of Applied Science in Engineering Science, specializing
-                      in Robotics Engineering with minors in Machine Intelligence and
-                      Engineering Business.
-                  </p>
+            <div class="academic-card">
+               
+                <h3>Minor in Engineering Business</h3>
+                <p>
+                   Learning how engineering products reach the market and how to lead teams effectively.
+                </p>
+            </div>
 
-                  <p>
-                      My coursework and projects span robotics, autonomous systems,
-                      machine learning, computer vision, state estimation, embedded
-                      systems, and control.
-                  </p>
-              </div>
-          </section>
+        </div>
+
+    </section>
 
         </main>
 
-            <!-- Experience -->
+          
+
+
+
+<!-- Experience -->
 
 <section id="experience">
 
     <div class="section-title">
-        Experience
+        <h2>Experience</h2>
     </div>
 
     <div class="horizontal-scroll">
 
-        <div class="experience-card">
-            <span class="tag">2026</span>
+        <div class="experience-card" data-exp="mda" tabindex="0" role="button">
+            <span class="tag">GNC Engineering Intern</span>
             <h3>MDA Space</h3>
-            <p>GNC Engineering Intern</p>
-        </div>
+            <span class="card-date">2026</span>
+          
+          <p class="card-summary">Improved motion planning for Canadarm3 and streamlined hardware-in-the-loop testing.</p>
+          </div>
 
-        <div class="experience-card">
-            <span class="tag">2022–Present</span>
+        <div class="experience-card" data-exp="rsx" tabindex="0" role="button">
+            <span class="tag">Systems Engineering Coordinator · Former Software Lead</span>
             <h3>Robotics for Space Exploration</h3>
-            <p>Systems Engineering Coordinator · Former Software Lead</p>
+            <span class="card-date">2022–Present</span>
+          <p class="card-summary">Developed autonomous navigation systems and coordinated rover systems integration.</p>
         </div>
 
-        <div class="experience-card">
-            <span class="tag">2025–2026</span>
+        <div class="experience-card" data-exp="cpr" tabindex="0" role="button">
+            <span class="tag">Device Manufacturing Technician Intern</span>
             <h3>Engineering CPR</h3>
-            <p>Device Manufacturing Technician Intern</p>
+            <span class="card-date">2025–2026</span>
+            <p class="card-summary">Improved surgical-device manufacturing through automation and electromechanical testing.</p>
         </div>
 
-
-        <div class="experience-card">
-            <span class="tag">2024</span>
+        <div class="experience-card" data-exp="uhn" tabindex="0" role="button">
+            <span class="tag">NSERC Robotics &amp; AI Software Intern</span>
             <h3>UHN × Toronto Smart Materials and Structures Lab</h3>
-            <p>NSERC Robotics & AI Software Intern</p>
+            <span class="card-date">2024</span>
+            <p class="card-summary">Developed wearable sensing and machine learning systems for center-of-pressure estimation.</p>
         </div>
 
-        
+        <div class="experience-card" data-exp="nsight" tabindex="0" role="button">
+            <span class="tag">Co-Chair</span>
+            <h3>NSight Engineering Science Mentorship Club</h3>
+            <span class="card-date">2024–2026</span>
+            <p class="card-summary">Built mentorship and networking opportunities for Engineering Science students.</p>
+        </div>
+
     </div>
 
 </section>
@@ -403,7 +152,7 @@
 <section id="projects">
 
     <div class="section-title">
-        Projects
+        <h2>Projects</h2>
     </div>
 
     <div class="horizontal-scroll">
@@ -451,7 +200,7 @@
         <section id="about-me">
 
             <div class="section-title">
-                A Little More About Me
+              <h2>Little More About Me</h2>
             </div>
 
             <div class="about-grid">
@@ -530,6 +279,193 @@
         </footer>
 
     </div>
+
+<dialog id="exp-dialog">
+    <button class="dialog-close" aria-label="Close">&times;</button>
+
+    <h2 id="exp-title"></h2>
+
+    <h4>About</h4>
+    <p id="exp-about"></p>
+
+    <h4>Objective</h4>
+    <p id="exp-objective"></p>
+
+    <h4>Approach</h4>
+    <ul id="exp-approach"></ul>
+
+    <div id="exp-outcome-wrap">
+        <h4>Outcome</h4>
+        <ul id="exp-outcome"></ul>
+    </div>
+
+    <div id="exp-skills-wrap">
+      <h4>Skills</h4>
+      <div id="exp-skills" class="skill-chips"></div>
+    </div>
+
+</dialog>
+
+
+<script>
+const experiences = {
+    mda: {
+        company: "MDA Space",
+        role: "Guidance, Navigation, and Control Engineering Intern",
+        about: "During my internship at MDA Space, I worked on improving motion planning for Canadarm3, a 7-DOF robotic manipulator intended for autonomous operations in space. I explored ways to make sampling-based planning more efficient while maintaining collision-free trajectories, while also contributing to hardware-in-the-loop testing through simulated manipulator environments.",
+        objective: "Reduce the computational cost of motion planning, improve the reusability of the path planner, and improve the accuracy and efficiency of hardware-in-the-loop testing.",
+        approach: [
+            "Integrated a neural network-guided sampling strategy into a BIT* planner.",
+            "Developed collision-checking heuristics to prioritize promising configurations.",
+            "Implemented trajectory shortcutting to reduce unnecessary joint-space checks.",
+            "Contributed to modularizing the planner for future lunar rover applications.",
+            "Built a C++/AGX tdl_log interface to support hardware-in-the-loop testing of an emulated manipulator."
+        ],
+        outcome: [
+    "Reduced joint collision checks by up to 90% through trajectory shortcutting.",
+    "Reduced planning time by 2% through improved collision-checking heuristics.",
+    "Reduced system testing time by 50% through automated tdl_log testing."
+        ],
+        skills: ["C++", "System Control", "AGX", "Hardware in the loop", "Matlab", "Python"]   
+    },
+    rsx: {
+        company: "Robotics for Space Exploration",
+        role: "Systems Engineering Coordinator & Former Software Lead",
+        about: "As part of the Robotics for Space Exploration Design Team, I have worked across software and systems engineering to develop autonomous capabilities for a planetary rover. I currently coordinate cross-subteam integration and testing, building on my previous role leading the autonomy software team.",
+        objective: "Develop reliable autonomous rover capabilities while coordinating integration and testing across multiple engineering subteams.",
+        approach: [
+            "Coordinate cross-subteam systems integration and test planning based on rover mission requirements.",
+            "Led a 35-person autonomy subteam developing ROS2-based navigation, obstacle avoidance, and object detection systems.",
+            "Developed an obstacle avoidance system using ZED camera point-cloud data, environment mapping, and A* path planning.",
+            "Operated in mission control during the University Rover Challenge in Utah, debugging and coordinating the rover during live mission operations."
+        ],
+        outcome: [
+            "Developed and integrated autonomous navigation capabilities for the team's competition rover.",
+            "Placed 15th out of 130 teams at the University Rover Challenge."
+        ],
+        skills: ["ROS2", "C++", "Python", "A*", "Computer Vision", "Point Clouds", "Autonomous Navigation", "Systems Engineering", "Git"]
+    },
+    cpr: {
+        company: "Engineering CPR",
+        role: "Device Manufacturing Technician Intern",
+        about: "During my internship at Engineering CPR, I worked on improving manufacturing and testing processes for spinal surgical systems. My work spanned electromechanical test equipment, production tooling, and software-based process automation, while also supporting the transition of a client-facing product from prototype to commercial production.",
+        objective: "Improve manufacturing efficiency, increase process visibility, and support the transition from prototype development to commercial production.",
+        approach: [
+            "Designed and prototyped a custom electromechanical testing bench with integrated lighting for spinal surgical systems.",
+            "Developed a Python, HTML, and JavaScript dashboard for automated validation and end-to-end item tracking.",
+            "Improved receiving-process visibility to help prevent missed items.",
+            "Supported engineering activities during the transition from prototype to first commercial production."
+        ],
+        outcome: [
+            "Reduced testing time from 5.5 hours to 2 hours.",
+            "Reduced missed items by 90% through improved tracking and process visibility.",
+            "Helped advance production timelines by 30%."
+        ],
+        skills: ["Python", "JavaScript", "HTML", "Electromechanical Systems", "Manufacturing", "Automation"]
+    },
+    uhn: {
+        company: "UHN & Toronto Smart Materials and Structures Lab",
+        role: "NSERC Robotics and AI Software Intern",
+        about: "During my internship at UHN and the Toronto Smart Materials and Structures Lab, I worked on a wearable sensing system for estimating center of pressure in spinal cord injury patients. I developed both the embedded data acquisition system and the machine learning models used to interpret data from multiple inertial sensors.",
+        objective: "Develop a reliable multi-IMU sensing system and machine learning pipeline for estimating center of pressure from wearable sensor data.",
+        approach: [
+            "Designed a C++ embedded data acquisition system using BNO055 IMUs and ESP32 microcontrollers with ESP-NOW communication.",
+            "Expanded the sensing system from 2 to 6 IMUs across multiple devices.",
+            "Developed and fine-tuned artificial neural network and LSTM models in Python using PyTorch and TensorFlow.",
+            "Processed and filtered IMU data to prepare measurements for machine learning-based center-of-pressure estimation."
+        ],
+        outcome: [
+            "Achieved a Pearson correlation of r = 0.97 with the ANN model and r = 0.73 with the LSTM model.",
+            "Successfully expanded the wearable sensing system to support 6 IMUs."
+        ],
+        skills: ["C++", "Python", "PyTorch", "TensorFlow", "ESP32", "IMUs", "ESP-NOW", "Embedded Systems", "Machine Learning"]
+    },
+
+    nsight:{
+      company: "NSight Engineering Science Mentorship Club",
+      role: "Co-Chair",
+      about: "As Co-Chair of NSight, I helped build a supportive mentorship and networking community for Engineering Science students at the University of Toronto. I worked across club operations, mentorship coordination, event planning, and outreach to connect students with peers and members of the Engineering Science community.",
+      objective: "Strengthen mentorship and networking opportunities for Engineering Science students through community programming and student-led initiatives.",
+      approach: [
+          "Led club operations including executive recruitment, mentor matching, event planning, and outreach.",
+          "Organized and hosted Engineering Science networking events connecting students with peers and members of the community.",
+          "Coordinated the executive team to plan and deliver mentorship and community-building initiatives."
+      ],
+      outcome: [
+          "Hosted networking events with 100+ attendees.",
+          "Facilitated mentorship and professional connections across the Engineering Science community."
+      ],
+      skills: ["Leadership", "Event Planning", "Mentorship", "Community Building", "Outreach", "Team Management"]
+    }
+};
+
+const expDialog = document.getElementById("exp-dialog");
+
+function openExperience(id) {
+    const e = experiences[id];
+    if (!e) return;
+
+    document.getElementById("exp-title").textContent = e.role + " - " + e.company;
+    document.getElementById("exp-about").textContent = e.about;
+    document.getElementById("exp-objective").textContent = e.objective;
+
+    const list = document.getElementById("exp-approach");
+    list.innerHTML = "";
+    e.approach.forEach(text => {
+        const li = document.createElement("li");
+        li.textContent = text;
+        list.appendChild(li);
+    });
+
+    // Hide Outcome if it's empty
+    const wrap = document.getElementById("exp-outcome-wrap");
+    if (e.outcome) {
+       // document.getElementById("exp-outcome").textContent = e.outcome;
+        const list2 = document.getElementById("exp-outcome");
+        list2.innerHTML = "";
+        e.outcome.forEach(text => {
+        const li = document.createElement("li");
+        li.textContent = text;
+        list2.appendChild(li);
+    });
+        wrap.style.display = "block";
+    } else {
+        wrap.style.display = "none";
+    }
+
+    const skillsWrap = document.getElementById("exp-skills-wrap");
+    const skillsBox = document.getElementById("exp-skills");
+    skillsBox.innerHTML = "";
+
+    if (e.skills && e.skills.length > 0) {
+        e.skills.forEach(skill => {
+            const chip = document.createElement("span");
+            chip.textContent = skill;
+            skillsBox.appendChild(chip);
+        });
+        skillsWrap.style.display = "block";
+    } else {
+        skillsWrap.style.display = "none";
+    }
+
+    expDialog.showModal();
+}
+
+document.querySelectorAll(".experience-card").forEach(card => {
+    card.addEventListener("click", () => openExperience(card.dataset.exp));
+    card.addEventListener("keydown", e => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openExperience(card.dataset.exp);
+        }
+    });
+});
+
+expDialog.querySelector(".dialog-close").addEventListener("click", () => expDialog.close());
+expDialog.addEventListener("click", e => {
+    if (e.target === expDialog) expDialog.close();
+});
+</script>
 
 </body>
 </html>

@@ -3,283 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Reim Yousef</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&f[]=rosaline@400&f[]=quicksand@500&f[]=britney@400&f[]=bonny@400&f[]=melodrama@500&display=swap" rel="stylesheet">
-  <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,500&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
 
-    <div class="container">
+<div class="container">
 
-        <!-- Navigation -->
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-links">
+            <a href="#top">Top</a>
+            <a href="#academic">Academic</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-        <nav>
-            <div class="nav-links">
-                <a href="#top">Top</a>
-                <a href="#academic">Academic</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-
+    <main>
 
         <!-- Hero -->
-
-        <main>
-          <section id="about" class="hero">
-              <div class="hero-content">
-
-                  <div class="hero-text">
-                      <h1>Hi, I'm Reim. Here’s what I’ve been working on! </h1>
-                          
-                      <p>
-                          I’m a Robotics Engineering student at the University of Toronto
-                          interested in automating systems and finding ways to bring robotics
-                          into everyday life, whether that’s in industry, the home, or beyond.
-                      </p>
-                  </div>
-
-                  <div class="hero-photo">
-                      <img src="images/reim_2.png" alt="Reim Yousef">
-                  </div>
-
-              </div>
-          </section>
-
-          <section id="academic">
-
-        <div class="section-title">
-            <h2>Academic Background</h2>
-        </div>
-
-        <span class="tag">University of Toronto · B.A.Sc. Engineering Science · 2022–2027</span>
-
-        <div class="academic-grid">
-
-            <div class="academic-card academic-main">
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm Reim. Here’s what I’ve been working on!</h1>
+                    <p>
+                        I’m a Robotics Engineering student at the University of Toronto
+                        interested in automating systems and finding ways to bring robotics
+                        into everyday life, whether that’s in industry, the home, or beyond.
+                    </p>
+                </div>
                 
-                <h3>Major in Robotics Engineering</h3>
-                <p>
-                   Exploring the software and hardware behind autonomous systems, from state estimation and control to computer vision and embedded design.
-                </p>
-            </div>
-
-            <div class="academic-card">
-                
-                <h3>Minor in Machine Intelligence</h3>
-                <p>
-                   Studying machine learning and AI methods for perception, prediction, decision-making, and intelligent systems.
-                </p>
-            </div>
-
-            <div class="academic-card">
-               
-                <h3>Minor in Engineering Business</h3>
-                <p>
-                   Learning how engineering products reach the market and how to lead teams effectively.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-        </main>
-
-          
-
-
-
-<!-- Experience -->
-
-<section id="experience">
-
-    <div class="section-title">
-        <h2>Experience</h2>
-    </div>
-
-    <div class="horizontal-scroll">
-
-        <div class="experience-card" data-exp="mda" tabindex="0" role="button">
-            <span class="tag">GNC Engineering Intern</span>
-            <h3>MDA Space</h3>
-            <span class="card-date">2026</span>
-          
-          <p class="card-summary">Improved motion planning for Canadarm3 and streamlined hardware-in-the-loop testing.</p>
-          </div>
-
-        <div class="experience-card" data-exp="rsx" tabindex="0" role="button">
-            <span class="tag">Systems Engineering Coordinator · Former Software Lead</span>
-            <h3>Robotics for Space Exploration</h3>
-            <span class="card-date">2022–Present</span>
-          <p class="card-summary">Developed autonomous navigation systems and coordinated rover systems integration.</p>
-        </div>
-
-        <div class="experience-card" data-exp="cpr" tabindex="0" role="button">
-            <span class="tag">Device Manufacturing Technician Intern</span>
-            <h3>Engineering CPR</h3>
-            <span class="card-date">2025–2026</span>
-            <p class="card-summary">Improved surgical-device manufacturing through automation and electromechanical testing.</p>
-        </div>
-
-        <div class="experience-card" data-exp="uhn" tabindex="0" role="button">
-            <span class="tag">NSERC Robotics &amp; AI Software Intern</span>
-            <h3>UHN × Toronto Smart Materials and Structures Lab</h3>
-            <span class="card-date">2024</span>
-            <p class="card-summary">Developed wearable sensing and machine learning systems for center-of-pressure estimation.</p>
-        </div>
-
-        <div class="experience-card" data-exp="nsight" tabindex="0" role="button">
-            <span class="tag">Co-Chair</span>
-            <h3>NSight Engineering Science Mentorship Club</h3>
-            <span class="card-date">2024–2026</span>
-            <p class="card-summary">Built mentorship and networking opportunities for Engineering Science students.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-            <!-- Projects -->
-<section id="projects">
-
-    <div class="section-title">
-        <h2>Projects</h2>
-    </div>
-
-    <div class="horizontal-scroll">
-
-        <div class="project-card">
-            <span class="tag">Thesis · 2026–2027</span>
-            <h3>Inertial Parameter Estimation</h3>
-            <p>
-                Estimating serial manipulator inertial parameters using
-                force-moment sensing and IMUs on a Stewart platform.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Robotics · ROS2</span>
-            <h3>Autonomous Rover</h3>
-            <p>
-                Rover autonomy involving perception, navigation,
-                obstacle avoidance, and mission operations.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Embedded Systems</span>
-            <h3>CoreXY Motion System</h3>
-            <p>
-                Firmware-level motion coordination using embedded C,
-                stepper motors, and CoreXY kinematics.
-            </p>
-        </div>
-
-        <div class="project-card">
-            <span class="tag">Machine Learning</span>
-            <h3>Center of Pressure Estimation</h3>
-            <p>
-                Wearable sensing and neural-network models for estimating
-                center of pressure from inertial measurements.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-            
-        <section id="about-me">
-
-            <div class="section-title">
-              <h2>Little More About Me</h2>
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-item">
-                    <h3>Baking</h3>
-                    <p>
-                        I enjoy trying new recipes, experimenting in the kitchen,
-                        and occasionally attempting things that are probably more
-                        complicated than they need to be.
-                    </p>
+                <div class="hero-photo">
+                    <svg class="doodle doodle-arrow" viewBox="0 0 80 60" aria-hidden="true">
+                        <path d="M6 52 C 14 18, 44 10, 70 20" />
+                        <path d="M58 8 L72 20 L56 28" />
+                    </svg>
+                    <figure class="polaroid">
+                        <img src="images/reim_2.png" alt="Reim Yousef" width="220" height="220">
+                        <figcaption>hi, it's me!</figcaption>
+                    </figure>
                 </div>
-
-                <div class="about-item">
-                    <h3>Climbing</h3>
-                    <p>
-                        I like the problem-solving side of climbing and having
-                        something that gets me away from a screen.
-                    </p>
-                </div>
-
-                <div class="about-item">
-                    <h3>Outdoors</h3>
-                    <p>
-                        I enjoy hiking, exploring new places, and finding excuses
-                        to spend more time outside.
-                    </p>
-                </div>
-
-                <div class="about-item">
-                    <h3>Reading</h3>
-                    <p>
-                        I like getting immersed in different kinds of stories
-                        and finding books that make me think about things
-                        differently.
-                    </p>
-                </div>
-
             </div>
-
         </section>
 
-            <!-- Contact -->
+        <!-- Academic -->
+        <section id="academic">
+            <div class="section-title">
+                <h2>Academic Background</h2>
+            </div>
 
-            <section id="contact" class="contact">
+            <span class="tag">University of Toronto · B.A.Sc. Engineering Science · 2022–2027</span>
 
-                <div class="section-title">
-                    Contact
+            <div class="academic-grid">
+                <div class="academic-card academic-main">
+                    <h3>Major in Robotics Engineering</h3>
+                    <p>Exploring the software and hardware behind autonomous systems, from state estimation and control to computer vision and embedded design.</p>
+                </div>
+                <div class="academic-card">
+                    <h3>Minor in Machine Intelligence</h3>
+                    <p>Studying machine learning and AI methods for perception, prediction, decision-making, and intelligent systems.</p>
+                </div>
+                <div class="academic-card">
+                    <h3>Minor in Engineering Business</h3>
+                    <p>Learning how engineering products reach the market and how to lead teams effectively.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <div class="section-title">
+                <h2>Experience</h2>
+            </div>
+
+            <div class="horizontal-scroll">
+
+                <div class="experience-card" data-exp="mda" tabindex="0" role="button">
+                    <span class="tag">GNC Engineering Intern</span>
+                    <h3>MDA Space</h3>
+                    <span class="card-date">2026</span>
+                    <p class="card-summary">Improved motion planning for Canadarm3 and streamlined hardware-in-the-loop testing.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
                 </div>
 
-                <div class="contact-links">
+                <div class="experience-card" data-exp="rsx" tabindex="0" role="button">
+                    <span class="tag">Systems Engineering Coordinator · Former Software Lead</span>
+                    <h3>Robotics for Space Exploration</h3>
+                    <span class="card-date">2022–Present</span>
+                    <p class="card-summary">Developed autonomous navigation systems and coordinated rover systems integration.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
 
-                    <a href="mailto:reim.yousef@mail.utoronto.ca">
-                        Email
-                    </a>
+                <div class="experience-card" data-exp="cpr" tabindex="0" role="button">
+                    <span class="tag">Device Manufacturing Technician Intern</span>
+                    <h3>Engineering CPR</h3>
+                    <span class="card-date">2025–2026</span>
+                    <p class="card-summary">Improved surgical-device manufacturing through automation and electromechanical testing.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
 
-                    <a href="https://www.linkedin.com/in/reim-yousef/"
-                       target="_blank">
-                        LinkedIn
-                    </a>
+                <div class="experience-card" data-exp="uhn" tabindex="0" role="button">
+                    <span class="tag">NSERC Robotics &amp; AI Software Intern</span>
+                    <h3>UHN × Toronto Smart Materials and Structures Lab</h3>
+                    <span class="card-date">2024</span>
+                    <p class="card-summary">Developed wearable sensing and machine learning systems for center-of-pressure estimation.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
 
-                    <a href="https://github.com/reimyousef"
-                       target="_blank">
-                        GitHub
-                    </a>
+                <div class="experience-card" data-exp="nsight" tabindex="0" role="button">
+                    <span class="tag">Co-Chair</span>
+                    <h3>NSight Engineering Science Mentorship Club</h3>
+                    <span class="card-date">2024–2026</span>
+                    <p class="card-summary">Built mentorship and networking opportunities for Engineering Science students.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+
+            <div class="horizontal-scroll">
+
+                <div class="project-card" data-project="inertial" tabindex="0" role="button">
+                    <span class="tag">Undergraduate Thesis</span>
+                    <h3>Serial Manipulator Parameter Estimation</h3>
+                    <p>Estimating the inertial parameters of a serial manipulator on a Stewart platform using force-moment sensing and IMUs.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+                <div class="project-card" data-project="mailrobot" tabindex="0" role="button">
+                    <span class="tag">Robotics · ROS</span>
+                    <h3>Autonomous Mail Robot</h3>
+                    <p>A TurtleBot3 that navigates a course and identifies delivery locations using LiDAR and computer vision.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+                <div class="project-card" data-project="banana" tabindex="0" role="button">
+                    <span class="tag">Machine Learning</span>
+                    <h3>Banana Ripeness Classification</h3>
+                    <p>A deep learning vision system that classifies bananas into four ripeness stages with 96% test accuracy.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+                <div class="project-card" data-project="corexy" tabindex="0" role="button">
+                    <span class="tag">Embedded Systems</span>
+                    <h3>Firmware-Level Motion Coordination System</h3>
+                    <p>A CoreXY plotter driven by custom embedded C firmware for precise 2D trajectories and emergency handling.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+                <div class="project-card" data-project="smartbin" tabindex="0" role="button">
+                    <span class="tag">Mechatronics · IoT</span>
+                    <h3>Smart Bin System</h3>
+                    <p>A connected waste bin that reports fill level and location in real time to support collection planning.</p>
+                    <span class="view-more">View more <span class="arrow">&rarr;</span></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About me: scrapbook -->
+        <section id="about-me">
+            <div class="section-title">
+                <h2>A Little More About Me</h2>
+            </div>
+
+            <div class="scrapbook">
+
+                <div class="scrap-col">
+
+                    <article class="scrap scrap-background">
+                        <h3>Where I'm from</h3>
+                        <p class="scrap-facts">
+                            <strong>Egyptian Canadian</strong><br>
+                            English + Arabic · a little French
+                        </p>
+                        <p>I've lived in a few different places and travelled to 9 countries so far, and I'm always excited to see somewhere new.</p>
+                    </article>
+
+                    <article class="scrap scrap-outside">
+                        <h3>Getting Outside</h3>
+                        <p>I love getting outside with friends, whether that's going for a run, playing frisbee, or finding somewhere new to explore.</p>
+                    </article>
 
                 </div>
 
-            </section>
+                <div class="scrap-col">
 
-        </main>
+                    <article class="scrap scrap-climbing">
+                        <h3>Climbing</h3>
+                        <p>I like the problem-solving side of climbing and having something that gets me away from a screen.</p>
+                    </article>
 
+                    <article class="scrap scrap-journaling">
+                        <h3>Journaling</h3>
+                        <p>I like ending the day by writing things down, reflecting on what went well, and figuring out what I want to carry into tomorrow. That's where the scrapbook theme came from!</p>
+                    </article>
 
-        <footer>
-            © 2026 Reim Yousef
-        </footer>
+                </div>
 
-    </div>
+            </div>
+        </section>
 
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <div class="section-title">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact-links">
+                <a href="mailto:reim.yousef@mail.utoronto.ca">Email</a>
+                <a href="https://www.linkedin.com/in/reim-yousef/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/reimyousef" target="_blank">GitHub</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Reim Yousef
+    </footer>
+
+</div>
+
+<!-- Pop-up (shared by experience and project cards) -->
 <dialog id="exp-dialog">
     <button class="dialog-close" aria-label="Close">&times;</button>
 
@@ -300,12 +257,10 @@
     </div>
 
     <div id="exp-skills-wrap">
-      <h4>Skills</h4>
-      <div id="exp-skills" class="skill-chips"></div>
+        <h4>Skills</h4>
+        <div id="exp-skills" class="skill-chips"></div>
     </div>
-
 </dialog>
-
 
 <script>
 const experiences = {
@@ -322,11 +277,11 @@ const experiences = {
             "Built a C++/AGX tdl_log interface to support hardware-in-the-loop testing of an emulated manipulator."
         ],
         outcome: [
-    "Reduced joint collision checks by up to 90% through trajectory shortcutting.",
-    "Reduced planning time by 2% through improved collision-checking heuristics.",
-    "Reduced system testing time by 50% through automated tdl_log testing."
+            "Reduced joint collision checks by up to 90% through trajectory shortcutting.",
+            "Reduced planning time by 2% through improved collision-checking heuristics.",
+            "Reduced system testing time by 50% through automated tdl_log testing."
         ],
-        skills: ["C++", "System Control", "AGX", "Hardware in the loop", "Matlab", "Python"]   
+        skills: ["C++", "System Control", "AGX", "Hardware in the loop", "Matlab", "Python"]
     },
     rsx: {
         company: "Robotics for Space Exploration",
@@ -380,65 +335,131 @@ const experiences = {
         ],
         skills: ["C++", "Python", "PyTorch", "TensorFlow", "ESP32", "IMUs", "ESP-NOW", "Embedded Systems", "Machine Learning"]
     },
+    nsight: {
+        company: "NSight Engineering Science Mentorship Club",
+        role: "Co-Chair",
+        about: "As Co-Chair of NSight, I helped build a supportive mentorship and networking community for Engineering Science students at the University of Toronto. I worked across club operations, mentorship coordination, event planning, and outreach to connect students with peers and members of the Engineering Science community.",
+        objective: "Strengthen mentorship and networking opportunities for Engineering Science students through community programming and student-led initiatives.",
+        approach: [
+            "Led club operations including executive recruitment, mentor matching, event planning, and outreach.",
+            "Organized and hosted Engineering Science networking events connecting students with peers and members of the community.",
+            "Coordinated the executive team to plan and deliver mentorship and community-building initiatives."
+        ],
+        outcome: [
+            "Hosted networking events with 100+ attendees.",
+            "Facilitated mentorship and professional connections across the Engineering Science community."
+        ],
+        skills: ["Leadership", "Event Planning", "Mentorship", "Community Building", "Outreach", "Team Management"]
+    }
+};
 
-    nsight:{
-      company: "NSight Engineering Science Mentorship Club",
-      role: "Co-Chair",
-      about: "As Co-Chair of NSight, I helped build a supportive mentorship and networking community for Engineering Science students at the University of Toronto. I worked across club operations, mentorship coordination, event planning, and outreach to connect students with peers and members of the Engineering Science community.",
-      objective: "Strengthen mentorship and networking opportunities for Engineering Science students through community programming and student-led initiatives.",
-      approach: [
-          "Led club operations including executive recruitment, mentor matching, event planning, and outreach.",
-          "Organized and hosted Engineering Science networking events connecting students with peers and members of the community.",
-          "Coordinated the executive team to plan and deliver mentorship and community-building initiatives."
-      ],
-      outcome: [
-          "Hosted networking events with 100+ attendees.",
-          "Facilitated mentorship and professional connections across the Engineering Science community."
-      ],
-      skills: ["Leadership", "Event Planning", "Mentorship", "Community Building", "Outreach", "Team Management"]
+const projects = {
+    inertial: {
+        title: "Serial Manipulator Parameter Estimation",
+        about: "An undergraduate thesis focused on estimating the inertial parameters of a serial manipulator mounted on a Stewart platform using force-moment sensing and inertial measurements.",
+        objective: "Develop a simulation-based parameter estimation framework to recover the manipulator's mass, center of mass, and inertia parameters from measured system dynamics.",
+        approach: [
+            "Reviewing existing inertial parameter estimation methods.",
+            "Developing a MATLAB/Simulink model of a Stewart platform and serial manipulator.",
+            "Planned workflow: use synthetic force-moment sensor and IMU data to formulate and validate a regression-based estimation approach."
+        ],
+        outcome: [
+            "Currently in the early stages of literature review and simulation development.",
+            "Next stage: generating synthetic measurements and evaluating the accuracy and robustness of the estimation method."
+        ],
+        skills: ["MATLAB", "Simulink", "System Identification", "Controls", "Literature Review", "Parameter Estimation"]
+    },
+    mailrobot: {
+        title: "Autonomous Mail Robot",
+        about: "A ROS-based autonomous mobile robot designed to navigate a course and identify delivery locations using LiDAR and computer vision.",
+        objective: "Develop a perception, localization, and control pipeline that allows a TurtleBot3 to recognize its state and autonomously follow a designated path.",
+        approach: [
+            "Built a color-recognition pipeline using OpenCV and LiDAR data, achieving 95% state-detection accuracy.",
+            "Developed a Bayesian localization system for probabilistic state estimation.",
+            "Implemented PID control in ROS and Python for closed-loop line following."
+        ],
+        outcome: [
+            "Successfully integrated perception, probabilistic localization, and closed-loop control into an autonomous robotic system."
+        ],
+        skills: ["ROS", "Python", "OpenCV", "LiDAR", "Bayesian Estimation", "PID Control"]
+    },
+    banana: {
+        title: "Banana Ripeness Classification",
+        about: "A deep learning computer vision system developed to classify bananas into four ripeness categories: unripe, ripe, overripe, and rotten.",
+        objective: "Develop a robust image classification model capable of identifying banana ripeness from photographs, with potential applications in food quality control, inventory management, and waste reduction.",
+        approach: [
+            "Built a transfer-learning pipeline using an ImageNet-pretrained AlexNet model.",
+            "Prepared and balanced the dataset through manual verification, resizing, normalization, color correction, and image augmentation.",
+            "Extracted AlexNet features and trained a custom convolutional classifier, comparing it against a multilayer perceptron baseline."
+        ],
+        outcome: [
+            "Achieved 96% test accuracy with a weighted F1-score of 0.97.",
+            "Most errors occurred in visually ambiguous transitional ripeness stages and under unusual lighting conditions."
+        ],
+        skills: ["PyTorch", "CNNs", "Transfer Learning", "Computer Vision", "Image Classification", "Data Augmentation"]
+    },
+    corexy: {
+        title: "Firmware-Level Motion Coordination System",
+        about: "A CoreXY-based 2D plotting system designed to explore embedded motion control, trajectory execution, and real-time firmware behavior.",
+        objective: "Develop firmware capable of coordinating multiple stepper motors to execute precise 2D trajectories while supporting manual control and emergency handling.",
+        approach: [
+            "Designed the mechanical system using an Arduino UNO, NEMA 17 stepper motors, A4988 microstepping drivers, and custom 3D-printed components.",
+            "Developed embedded C firmware using a finite-state machine for manual control, trajectory execution, and serial commands.",
+            "Implemented interrupt-driven emergency handling."
+        ],
+        outcome: [
+            "Implemented a functional open-loop motion control system capable of executing programmed 2D plotting trajectories."
+        ],
+        skills: ["Embedded C", "Arduino", "FSMs", "Stepper Motors", "Motion Control", "Interrupts"]
+    },
+    smartbin: {
+        title: "Smart Bin System",
+        about: "A mechatronics system designed to improve waste collection by monitoring bin fill levels and locations in real time.",
+        objective: "Develop a connected waste-management system that provides stakeholders with information about bin capacity and location to support more efficient collection planning.",
+        approach: [
+            "Designed the physical bin system and 3D model.",
+            "Integrated ultrasonic and load-cell sensors with an ESP32.",
+            "Developed a Python-based system to transmit sensor and GPS data to Adafruit IO for real-time monitoring and visualization."
+        ],
+        outcome: [
+            "Built a working prototype capable of detecting waste levels with up to 91% accuracy and providing real-time bin status and location data.",
+            "Incorporated stakeholder feedback to refine the design for local implementation."
+        ],
+        skills: ["Python", "ESP32", "Sensors", "IoT", "AutoCAD", "Mechatronics", "Systems Design"]
     }
 };
 
 const expDialog = document.getElementById("exp-dialog");
 
-function openExperience(id) {
-    const e = experiences[id];
-    if (!e) return;
-
-    document.getElementById("exp-title").textContent = e.role + " - " + e.company;
-    document.getElementById("exp-about").textContent = e.about;
-    document.getElementById("exp-objective").textContent = e.objective;
-
-    const list = document.getElementById("exp-approach");
+function fillList(listId, items) {
+    const list = document.getElementById(listId);
     list.innerHTML = "";
-    e.approach.forEach(text => {
+    items.forEach(text => {
         const li = document.createElement("li");
         li.textContent = text;
         list.appendChild(li);
     });
+}
 
-    // Hide Outcome if it's empty
-    const wrap = document.getElementById("exp-outcome-wrap");
-    if (e.outcome) {
-       // document.getElementById("exp-outcome").textContent = e.outcome;
-        const list2 = document.getElementById("exp-outcome");
-        list2.innerHTML = "";
-        e.outcome.forEach(text => {
-        const li = document.createElement("li");
-        li.textContent = text;
-        list2.appendChild(li);
-    });
-        wrap.style.display = "block";
+function openDetail(d) {
+    document.getElementById("exp-title").textContent = d.title;
+    document.getElementById("exp-about").textContent = d.about;
+    document.getElementById("exp-objective").textContent = d.objective;
+    fillList("exp-approach", d.approach);
+
+    const outcomeWrap = document.getElementById("exp-outcome-wrap");
+    if (d.outcome && d.outcome.length > 0) {
+        fillList("exp-outcome", d.outcome);
+        outcomeWrap.style.display = "block";
     } else {
-        wrap.style.display = "none";
+        outcomeWrap.style.display = "none";
     }
 
     const skillsWrap = document.getElementById("exp-skills-wrap");
     const skillsBox = document.getElementById("exp-skills");
     skillsBox.innerHTML = "";
-
-    if (e.skills && e.skills.length > 0) {
-        e.skills.forEach(skill => {
+    if (d.skills && d.skills.length > 0) {
+        d.skills.forEach(skill => {
             const chip = document.createElement("span");
             chip.textContent = skill;
             skillsBox.appendChild(chip);
@@ -451,20 +472,75 @@ function openExperience(id) {
     expDialog.showModal();
 }
 
-document.querySelectorAll(".experience-card").forEach(card => {
-    card.addEventListener("click", () => openExperience(card.dataset.exp));
-    card.addEventListener("keydown", e => {
-        if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            openExperience(card.dataset.exp);
-        }
+function openExperience(id) {
+    const e = experiences[id];
+    if (!e) return;
+    openDetail({ ...e, title: e.role + " - " + e.company });
+}
+
+function openProject(id) {
+    const p = projects[id];
+    if (!p) return;
+    openDetail(p);
+}
+
+function makeClickable(selector, dataKey, openFn) {
+    document.querySelectorAll(selector).forEach(card => {
+        card.addEventListener("click", () => openFn(card.dataset[dataKey]));
+        card.addEventListener("keydown", e => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openFn(card.dataset[dataKey]);
+            }
+        });
     });
-});
+}
+
+makeClickable(".experience-card", "exp", openExperience);
+makeClickable(".project-card", "project", openProject);
 
 expDialog.querySelector(".dialog-close").addEventListener("click", () => expDialog.close());
 expDialog.addEventListener("click", e => {
     if (e.target === expDialog) expDialog.close();
 });
+
+/* ---------- Highlight the nav link for the current section ---------- */
+const navLinks = document.querySelectorAll(".nav-links a");
+const spySections = document.querySelectorAll("main section");
+
+function updateActiveNav() {
+    let currentId = "about";   // the hero section
+
+    spySections.forEach(sec => {
+        if (sec.getBoundingClientRect().top <= 140) {
+            currentId = sec.id;
+        }
+    });
+
+    // Contact is short, so it may never reach the trigger line: catch the bottom of the page
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4 || currentId === "about-me" ) {
+        currentId = "contact";
+    }
+    
+    const target = currentId === "about" ? "#top" : "#" + currentId;
+    navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === target);
+    });
+}
+
+let ticking = false;
+window.addEventListener("scroll", () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            updateActiveNav();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+updateActiveNav();   // set the right link on page load
+
 </script>
 
 </body>

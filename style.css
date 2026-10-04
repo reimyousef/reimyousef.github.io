@@ -1,17 +1,94 @@
-* {
+/* ==========================================================
+   Reim Yousef: portfolio styles
+   ========================================================== */
+
+/* ---------- Design tokens ---------- */
+
+:root {
+    --bg: #dddae0;              /* solid version of your old translucent #d5d1d9cf */
+    --text: #222;
+    --text-muted: #555;
+    --text-faint: #888;
+    --accent: #315A78;
+    --card-bg: #f1f3f5;
+    --card-border: #d8dce0;
+    --card-hover-bg: #d0c2d3;   /* your purple hover */
+    --card-hover-border: #b79dbb;
+    --rule: #cbc7d0;
+    --radius: 8px;
+    --font-heading: 'Melodrama', serif;
+    --font-body: 'Satoshi', sans-serif;
+    --heading-weight: 300;      /* lighter headings; use 500 for a bit more presence */
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;   /* keeps section titles clear of the sticky nav */
 }
 
 body {
     margin: 0;
-    font-family: 'Melodrama', serif;
-    color: #222;
-    background: #d5d1d9cf;
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--bg);
     line-height: 1.6;
+}
+
+body:has(dialog[open]) {
+    overflow: hidden;           /* page doesn't scroll behind a pop-up */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ---------- Typography ---------- */
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    font-family: var(--font-heading);
+    font-weight: var(--heading-weight);
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
 
 /* ---------- Navigation ---------- */
@@ -20,8 +97,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #d5d1d9cf;
-    border-bottom: 1px solid #ddd;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
     padding: 18px 0;
 }
 
@@ -33,13 +110,14 @@ nav {
 }
 
 nav a {
-    color: #555;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 15px;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #315A78;
+    color: var(--accent);
 }
 
 /* ---------- Layout ---------- */
@@ -54,7 +132,7 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
     padding: 50px 40px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--rule);
     color: #666;
 }
 
@@ -78,16 +156,15 @@ footer {
 }
 
 .hero h1 {
-    font-size: 41px;
+    font-size: clamp(34px, 5vw, 44px);
     line-height: 1.1;
-    margin: 0 0 24px;
-    font-weight: 600;
+    margin-bottom: 24px;
 }
 
 .hero p {
     max-width: 700px;
     font-size: 19px;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .hero-photo {
@@ -102,57 +179,30 @@ footer {
     border-radius: 50%;
 }
 
-/* ---------- Typography ---------- */
-
-h2 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-h4 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.tag {
-    color: #315A78;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
 /* ---------- Academic ---------- */
 
 .academic-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 5px;
-    margin-top: 9px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .academic-card {
-    padding: 13px;
-    border: 1px solid #d8dce0;
-    border-radius: 8px;
-    background: #f1f3f5;
+    padding: 22px;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    background: var(--card-bg);
 }
 
 .academic-card h3 {
-    margin: 10px 0 8px;
     font-size: 21px;
+    margin: 0 0 8px;
 }
 
 .academic-card p {
-    color: #555;
+    color: var(--text-muted);
     margin: 0;
 }
 
@@ -165,7 +215,6 @@ h4 {
 
 .academic-main h3 {
     font-size: 25px;
-    font-weight: 700;
     line-height: 1.2;
 }
 
@@ -174,15 +223,15 @@ h4 {
     line-height: 1.8;
 }
 
-/* ---------- Horizontal card rows ---------- */
+/* ---------- Cards (experience + projects) ---------- */
 
 .horizontal-scroll {
     display: flex;
-    flex-direction: row;       /* explicit: cards side by side */
-    flex-wrap: nowrap;         /* explicit: never wrap to a new line */
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 20px;
     overflow-x: auto;
-    padding-bottom: 15px;
+    padding: 4px 4px 15px;      /* room so the hover lift isn't clipped */
     scrollbar-width: thin;
 }
 
@@ -192,103 +241,252 @@ h4 {
 
 .horizontal-scroll::-webkit-scrollbar-thumb {
     background: #c9cdd1;
+    border-radius: 3px;
 }
 
 .experience-card,
 .project-card {
     flex: 0 0 360px;
     min-height: 250px;
+    display: flex;
+    flex-direction: column;
     padding: 30px;
-    border: 1px solid #d8dce0;
-    border-radius: 8px;
-    background: #f1f3f5;
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    background: var(--card-bg);
+    cursor: pointer;
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .experience-card:hover,
-.experience-card:focus-visible {
-    background: #d0c2d3;          /* soft blue tint to match your #315A78 accent */
-    border-color: #e3cbe0;
-    transform: translateY(-3px);  /* small lift; delete this line if you don't want it */
+.experience-card:focus-visible,
+.project-card:hover,
+.project-card:focus-visible {
+    background: var(--card-hover-bg);
+    border-color: var(--card-hover-border);
+    transform: translateY(-3px);
 }
 
-.experience-card {
-    cursor: pointer;
-}
-
-.experience-card .tag {
-    display: block;            /* role on its own line */
+.experience-card .tag,
+.project-card .tag {
+    display: block;             /* role / label on its own line */
 }
 
 .experience-card h3 {
-    margin: 6px 0 4px;         /* company line, tight under the role */
+    margin: 6px 0 4px;
 }
 
 .project-card h3 {
-    margin: 14px 0 8px;
     font-size: 21px;
+    margin: 14px 0 8px;
 }
 
 .experience-card p,
 .project-card p {
-    color: #555;
+    color: var(--text-muted);
     margin: 0;
 }
 
 .card-date {
     display: block;
     font-size: 14px;
-    color: #888;
+    color: var(--text-faint);
     margin-bottom: 14px;
 }
 
 .card-summary {
     font-size: 15px;
-    color: #555;
-    margin: 0;
 }
 
-/* ---------- About me ---------- */
+.view-more {
+    margin-top: auto;           /* pins to the bottom of every card */
+    padding-top: 18px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+}
 
-.about-grid {
+.view-more .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.experience-card:hover .arrow,
+.experience-card:focus-visible .arrow,
+.project-card:hover .arrow,
+.project-card:focus-visible .arrow {
+    transform: translateX(5px);
+}
+
+/* ---------- About me: scrapbook ---------- */
+
+.scrapbook {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: #d5d1d9cf;
-    border: 1px solid #d5d1d9cf;
-    border-radius: 10px;
-    overflow: hidden;
+    grid-template-columns: 7fr 5fr;
+    gap: 24px;
+    align-items: start;
+    padding: 20px 0 10px;
 }
 
-.about-item {
-    background: #d5d1d9cf;
-    padding: 32px;
-    min-height: 180px;
+/* each column stacks on its own, so there are no shared rows and no gaps */
+.scrap-col {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
 }
 
-.about-item h3 {
+.scrap {
+    --tilt: 0deg;
+    position: relative;
+    padding: 24px 26px 26px;
+    background: #fbf8f1;
+    box-shadow: 0 6px 14px rgba(40, 30, 50, 0.16);
+    transform: rotate(var(--tilt));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scrap:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow: 0 12px 22px rgba(40, 30, 50, 0.2);
+}
+
+/* strip of tape */
+.scrap::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 92px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+.scrap h3 {
+    font-size: 26px;
     margin: 0 0 10px;
-    font-size: 20px;
 }
 
-.about-item p {
-    color: #555;
-    max-width: 500px;
+.scrap p {
     margin: 0;
+    color: var(--text-muted);
+}
+
+.scrap p + p {
+    margin-top: 14px;
+}
+
+/* optional polaroid-style photo at the top of a scrap */
+.scrap img {
+    width: 100%;
+    margin-bottom: 18px;
+    border: 8px solid #fff;
+    border-bottom-width: 28px;
+    box-shadow: 0 3px 8px rgba(40, 30, 50, 0.18);
+}
+
+.scrap-facts {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.scrap-facts strong {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Where I'm from: the big feature piece */
+.scrap-background {
+    --tilt: -1.5deg;
+    padding: 36px 30px;
+    background: #f6e7d8;
+}
+
+.scrap-background h3 {
+    font-size: 40px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+}
+
+.scrap-background p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Journaling: ruled paper, directly under Where I'm from */
+.scrap-journaling {
+    --tilt: -0.8deg;
+    background-color: #fffdf7;
+    background-image: repeating-linear-gradient(
+        transparent 0, transparent 27px, #d9e2ee 27px, #d9e2ee 28px
+    );
+    background-position: 0 56px;
+}
+
+.scrap-journaling::before {
+    left: 60%;
+    transform: translateX(-50%) rotate(3deg);
+}
+
+/* Climbing */
+.scrap-climbing {
+    --tilt: 1deg;
+    background: #dfe6dc;
+}
+
+.scrap-climbing::before {
+    left: 22%;
+    transform: translateX(-50%) rotate(4deg);
+}
+
+/* Getting Outside: half the column width, pushed to the far right */
+.scrap-outside {
+    --tilt: -1deg;
+    margin-top: -14px;          /* tucks it a little higher, closer to Where I'm from */
+    background: #d8e2ea;
+}
+
+.scrap-outside::before {
+    left: 78%;
+    transform: translateX(-50%) rotate(-6deg);
+}
+
+/* ---------- Contact ---------- */
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.contact-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ---------- Pop-up ---------- */
 
 dialog {
-    border: 1px solid #dededb;
-    border-radius: 8px;
-    padding: 22px 40px 40px;
-    max-width: 640px;
+    position: fixed;
+    margin: auto;
     width: calc(100% - 40px);
+    max-width: 640px;
     max-height: 85vh;
     overflow-y: auto;
-    margin: auto;
-    color: #222;
+    padding: 22px 40px 40px;
+    border: 1px solid #dededb;
+    border-radius: var(--radius);
+    background: #fff;
+    color: var(--text);
     font-family: inherit;
 }
 
@@ -296,47 +494,51 @@ dialog::backdrop {
     background: rgba(0, 0, 0, 0.45);
 }
 
+dialog p {
+    color: var(--text-muted);
+}
+
 dialog h4 {
+    font-family: var(--font-body);
+    font-weight: 500;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #888;
+    color: var(--text-faint);
     margin: 22px 0 6px;
-}
-
-dialog p {
-    color: #555;
 }
 
 dialog ul {
     padding-left: 20px;
-    color: #555;
+    margin: 0;
+    color: var(--text-muted);
 }
 
 dialog li {
     margin-bottom: 8px;
 }
 
+#exp-title {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin: 0 30px 20px;        /* side margin keeps it clear of the close button */
+}
+
 .dialog-close {
     position: absolute;
-    top: 14px;
-    right: 18px;
+    top: 12px;
+    right: 16px;
     background: none;
     border: none;
     font-size: 1.8rem;
-    color: #888;
+    line-height: 1;
+    color: var(--text-faint);
     cursor: pointer;
 }
 
 .dialog-close:hover {
     color: #111;
-}
-
-#exp-title {
-    text-align: center;
-    font-size: 1.4rem;
-    line-height: 1.3;          /* was 1: wrapped titles were cramped */
-    margin: 0 30px 20px;
 }
 
 .skill-chips {
@@ -348,9 +550,9 @@ dialog li {
 .skill-chips span {
     padding: 6px 14px;
     font-size: 14px;
-    color: #315A78;
+    color: var(--accent);
     background: #fff;
-    border: 1px solid #d8dce0;
+    border: 1px solid var(--card-border);
     border-radius: 999px;
 }
 
@@ -358,40 +560,333 @@ dialog li {
 
 @media (max-width: 700px) {
     nav {
-        padding: 20px;
+        padding: 14px 10px;
     }
 
     nav a {
-        margin-left: 12px;
+        font-size: 14px;
     }
 
     section {
         padding: 60px 20px;
     }
 
+    h2 {
+        font-size: 26px;
+    }
+
     .hero-content {
         flex-direction: column-reverse;
         align-items: flex-start;
+        gap: 30px;
     }
 
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero-photo img {
+    .polaroid img {
         width: 180px;
-        height: 180px;         /* was 220px: made the photo an oval */
+        height: 180px;
+    }
+
+    .doodle-arrow {
+        display: none;
     }
 
     .academic-grid {
         grid-template-columns: 1fr;
     }
 
+    .scrapbook {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .scrap-col {
+        gap: 28px;
+    }
+
+    .scrap-background {
+        padding: 34px 26px;
+    }
+
+    .scrap-background h3 {
+        font-size: 34px;
+    }
+
     .academic-main {
         grid-row: auto;
+    }
+
+    .experience-card,
+    .project-card {
+        flex-basis: 300px;
+        padding: 24px;
     }
 
     dialog {
         padding: 22px 24px 30px;
     }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+    .experience-card:hover,
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* ---------- Scrapbook theme for the rest of the site ---------- */
+
+:root {
+    --paper: #fbf8f1;
+    --paper-peach: #f6e7d8;
+    --paper-sage: #dfe6dc;
+    --paper-sky: #d8e2ea;
+    --paper-shadow: 0 6px 14px rgba(40, 30, 50, 0.16);
+}
+
+/* Experience + project cards: paper colors, tape, tilt */
+.experience-card,
+.project-card {
+    --tilt: 0deg;
+    position: relative;
+    background: var(--card-paper, var(--paper));
+    border: none;
+    box-shadow: var(--paper-shadow);
+    transform: rotate(var(--tilt));
+}
+
+
+.experience-card:nth-child(3n+1), .project-card:nth-child(3n+1) { --card-paper: var(--paper-peach); --tilt: -1deg; }
+.experience-card:nth-child(3n+2), .project-card:nth-child(3n+2) { --card-paper: var(--paper-sage);  --tilt: 1deg; }
+.experience-card:nth-child(3n),   .project-card:nth-child(3n)   { --card-paper: var(--paper-sky);   --tilt: -0.5deg; }
+
+.experience-card::before,
+.project-card::before {
+    display: none;
+}
+
+/* hover straightens and lifts; the color stays put */
+.experience-card:hover, .experience-card:focus-visible,
+.project-card:hover,    .project-card:focus-visible {
+    background: var(--card-paper, var(--paper));
+    border-color: transparent;
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow: 0 12px 22px rgba(40, 30, 50, 0.2);
+}
+
+/* Academic blocks: taped, with a little movement on hover */
+.academic-card {
+    --tilt: 0deg;
+    position: relative;
+    border: none;
+    box-shadow: var(--paper-shadow);
+    transform: rotate(var(--tilt));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.academic-main { --tilt: -0.8deg; background: var(--paper-peach); }
+.academic-grid .academic-card:nth-child(2) { --tilt: 0.8deg;  background: var(--paper-sage); }
+.academic-grid .academic-card:nth-child(3) { --tilt: -0.5deg; background: var(--paper-sky); }
+
+.academic-card::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 84px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+.academic-grid .academic-card:nth-child(2)::before {
+    left: 70%;
+    transform: translateX(-50%) rotate(4deg);
+}
+
+.academic-grid .academic-card:nth-child(3)::before {
+    left: 28%;
+    transform: translateX(-50%) rotate(-5deg);
+}
+
+.academic-card:hover {
+    transform: rotate(0deg) translateY(-5px) scale(1.015);
+    box-shadow: 0 12px 22px rgba(40, 30, 50, 0.2);
+}
+
+/* Section titles: label-maker strip */
+.section-title h2 {
+    display: inline-block;
+    background: var(--paper);
+    padding: 4px 18px;
+    box-shadow: 0 3px 8px rgba(40, 30, 50, 0.12);
+    transform: rotate(-1deg);
+}
+
+/* Contact links: little paper stickers */
+.contact-links a {
+    background: var(--paper);
+    padding: 8px 18px;
+    border: none;
+    box-shadow: 0 3px 8px rgba(40, 30, 50, 0.14);
+    transform: rotate(-1.5deg);
+    transition: transform 0.2s ease;
+}
+.contact-links a:nth-child(2) { transform: rotate(1deg); }
+.contact-links a:nth-child(3) { transform: rotate(-0.5deg); }
+.contact-links a:hover { transform: rotate(0deg) translateY(-2px); }
+
+/* Nav: active link looks like a little paper label */
+nav a {
+    padding: 4px 14px;
+    border-radius: 2px;
+    transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+nav a.active {
+    color: var(--accent);
+    background: var(--paper);
+    box-shadow: 0 3px 8px rgba(40, 30, 50, 0.14);
+    transform: rotate(-1.5deg);
+}
+
+body {
+       background-color: var(--bg);
+       background-image: radial-gradient(rgba(60, 40, 80, 0.13) 1px, transparent 1px);
+       background-size: 22px 22px;
+   }
+
+dialog {
+    background: var(--paper);
+}
+
+.skill-chips span {
+    background: #fff;   /* chips stay white so they pop against the paper */
+}
+
+.hero-photo {
+    position: relative;
+    padding: 14px;
+}
+
+.polaroid {
+    position: relative;
+    margin: 0;
+    padding: 12px 12px 0;
+    background: #fff;
+    box-shadow: var(--paper-shadow);
+    transform: rotate(3deg);
+    transition: transform 0.25s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+.polaroid img {
+    width: 220px;
+    height: 220px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    transform: none;
+}
+
+.polaroid figcaption {
+    padding: 12px 0 14px;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    color: var(--text-muted);
+}
+
+/* tape on top */
+.polaroid::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    width: 84px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.doodle {
+    position: absolute;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.doodle-arrow {
+    width: 70px;
+    left: -62px;
+    top: 30px;
+}
+
+/* squiggle under section titles */
+.section-title {
+    margin-bottom: 28px;
+}
+
+.section-title h2 {
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    bottom: -16px;
+    width: 90px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='10' viewBox='0 0 90 10'%3E%3Cpath d='M2 5 Q 12 -1 22 5 T 42 5 T 62 5 T 82 5' fill='none' stroke='%23315A78' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+}
+
+/* ---------- Torn-paper bands behind Experience and About Me ---------- */
+
+body {
+    overflow-x: clip;
+}
+
+#experience,
+#about-me {
+    position: relative;
+    isolation: isolate;
+}
+
+#experience::before,
+#about-me::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: rgba(251, 248, 241, 0.6);
+    clip-path: polygon(
+        0 6px, 4% 1px, 9% 7px, 14% 2px, 20% 8px, 26% 3px, 31% 7px, 37% 1px, 43% 6px,
+        49% 2px, 55% 8px, 61% 3px, 67% 7px, 73% 1px, 79% 6px, 85% 2px, 91% 8px, 96% 3px, 100% 6px,
+        100% calc(100% - 5px), 95% calc(100% - 1px), 89% calc(100% - 7px), 83% calc(100% - 2px),
+        77% calc(100% - 8px), 70% calc(100% - 3px), 64% calc(100% - 7px), 58% calc(100% - 1px),
+        52% calc(100% - 6px), 46% calc(100% - 2px), 40% calc(100% - 8px), 34% calc(100% - 3px),
+        28% calc(100% - 7px), 22% calc(100% - 1px), 16% calc(100% - 6px), 10% calc(100% - 2px),
+        5% calc(100% - 7px), 0 calc(100% - 3px)
+    );
 }
